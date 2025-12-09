@@ -52,6 +52,7 @@ dependencies:
   http: ^1.5.0
   cloudinary: ^1.2.0
   chewie: ^1.4.0
+  flutter_dotenv: ^6.0.0
 
 
 dev_dependencies:

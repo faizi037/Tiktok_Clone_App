@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tiktok_app/auth_check.dart';
 import 'package:tiktok_app/home/following/for_you/video_player_screen.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 
 import 'authentication/authentication_controller.dart';
@@ -11,6 +12,11 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   Get.put(AuthenticationController());
+   Future<void> main() async {
+  await dotenv.load(fileName: ".env");
+  runApp(MyApp());
+}
+
 
   runApp(const MyApp());
 }
